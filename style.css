@@ -1,0 +1,59 @@
+@charset "UTF-8"; /* -> 한글이 안깨지게함 */
+* {padding: 0; margin: 0;}
+.약{clear: both;}
+/* 자식은 부모의 넓이에 따라가고
+부모는 자식의 높이에 따라간다 */
+.전체{background-color: aquamarine;
+    padding: 20px;
+    width: 600px; 
+    margin: auto; /* 영역을 가운데정렬 */
+    
+}
+.전체 .첫째자식{background-color: burlywood;
+    height: 500px;
+    background-image:url(https://photo.coolenjoy.co.kr/data/editor/1908/Bimg_fbeae84af08bbd7de189375fbdf82983_xmol.png);
+    transition: 0.3s;
+    background-repeat: no-repeat; /* 배경이미지를 반복하지말것(한장만) */
+    background-size: cover; /* 사진이 배경사이즈에 맞춰서 커버됨 */
+}
+.전체 .첫째자식:hover{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDB0H8hNVSVHF7VJHpFx4OYWn_YGCzJAAugA&usqp=CAU);
+}
+
+
+.전체 .둘째자식{
+    margin-top: 20px;
+    background-color: khaki;}
+.전체 .둘째자식 .첫째손자{float:left; background-color:blueviolet;
+    height: 200px; width: 31.3333%;
+    margin:0 1%;
+    /* margin: 1%; 상하좌우 
+       margin: 1% 2%; 상하좌우
+       margin: 1% 2% 3%; 상 좌우 하
+       margin: 1% 2% 3% 4%; 상 오른쪽 아래 왼쪽
+
+       마진을 적용시 오른쪽에 2%적용
+       margin:0 2% 0 0;
+       margin-right:2%; -> 이게 더 외우기 쉽다
+    */
+}
+.전체 .둘째자식 .둘째손자{float:left; background-color: teal;
+    height: 200px;width: 31.3333%; margin:0 1%;}
+.전체 .둘째자식 .세째손자{float:left; background-color: tomato;
+    height: 200px;width: 31.3333%; margin:0 1%;}
+
+.전체 .세째자식{background-color: #cdf0ea; margin-top: 20px;}
+.전체 .세째자식:after{content: ""; display: block; clear: both;}
+.전체 .세째자식 .one{background-color: #ff8787;
+    width: 24.25%; float: left; height: 200px; margin-right: 1%;
+}
+.전체 .세째자식 .two{background-color: #ba356f; margin-right: 1%;
+    width: 24.25%; float: left; height: 200px;
+}
+.전체 .세째자식 .two span{color: red;} /* 인라인요소span */
+.전체 .세째자식 .three{background-color: #e1ffb1; margin-right: 1%;
+    width: 24.25%; float: left; height: 200px;
+}
+.전체 .세째자식 .four{background-color: #d2daff;
+    width: 24.25%; float: left; height: 200px;
+}
